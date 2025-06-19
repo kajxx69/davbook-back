@@ -12,6 +12,7 @@ import authRoutes from './routes/auth.js';
 import bookRoutes from './routes/books.js';
 import messageRoutes from './routes/messages.js';
 import adminRoutes from './routes/admin.js';
+import purchaseRoutes from './routes/purchases.js';
 
 // Configuration
 dotenv.config();
@@ -71,7 +72,7 @@ app.use('/api/auth/register', registerLimiter);
 
 // CORS
 const corsOptions = {
-  origin: ['https://davybookzone.onrender.com'], // Autoriser le frontend Vite
+  origin: ['http://localhost:5173'], // Autoriser le frontend Vite
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
@@ -91,6 +92,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/purchases', purchaseRoutes);
 
 // Route de santé
 app.get('/api/health', (req, res) => {
