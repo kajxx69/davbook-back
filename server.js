@@ -72,7 +72,7 @@ app.use('/api/auth/register', registerLimiter);
 
 // CORS
 const corsOptions = {
-  origin: ['http://localhost:5173'], // Autoriser le frontend Vite
+  origin: ['https://davybookszone.onrender.com'], // Autoriser le frontend Vite
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
