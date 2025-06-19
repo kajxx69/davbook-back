@@ -75,8 +75,7 @@ router.put('/messages/:id/toggle-read', async (req, res) => {
   }
 });
 
-// Gestion des achats
-router.get('/purchases', getAllPurchases);
+
 
 // Paramètres
 router.get('/settings', getSettings);
