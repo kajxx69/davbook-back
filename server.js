@@ -92,7 +92,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/admin', adminRoutes);
-app.use('/api/purchases', purchaseRoutes);
+
 
 // Route de santé
 app.get('/api/health', (req, res) => {
